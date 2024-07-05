@@ -1,0 +1,83 @@
+/*CSS Reset*/
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    line-height: calc(1em + 0.5rem);
+    /*-webkit-font-smoothing: antialiased;*/
+}
+
+img, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+textarea, button, input, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*Actual styling*/
+
+/*Basic page layout*/
+:root {
+    --color-bg: #fff;
+    --color-header: #fff;
+    --color-sidebar: #236d98;
+    --color-main: #cbe4ea;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    
+    background-color: var(--color-bg);
+}
+
+header {
+    grid-column: 2;
+    grid-row: 1;
+
+    border: 1px black solid;
+    background-color: var(--color-header);
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    background-color: var(--color-sidebar);
+    border: 1px solid black;
+    color: #fff;
+}
+
+.main-content {
+    grid-column: 2;
+    grid-row: 2;
+
+    background-color: var(--color-main);
+}
+
+ul {
+    list-style: none;
+
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+
+}
