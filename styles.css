@@ -31,8 +31,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /*Actual styling*/
-
-/*Basic page layout*/
 :root {
     --color-bg: #fff;
     --color-header: #fff;
@@ -40,6 +38,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --color-main: #cbe4ea;
 }
 
+/*Basic page layout*/
 body {
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -106,7 +105,7 @@ h1 .svg-icon {
     width: 1.3em;
 }
 
-li .svg-icon {
+.svg-icon {
     width: 1em;
 }
 
@@ -121,6 +120,37 @@ nav {
         margin-bottom: 1.4rem;
     }
 }
+
+.main-content {
+    padding: 40px 24px;
+
+    & h2 {
+        font-weight: 100;
+    }
+}
+
+.project-card {
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: inset 10px 0 orange;
+}
+
+.buttons-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    justify-content: end;
+    grid-gap: 2rem;
+}
+
+.buttons-wrapper button {
+    width: 32px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+
 
 
 
