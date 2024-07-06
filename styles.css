@@ -121,14 +121,35 @@ nav {
     }
 }
 
+/*Main Content grid layout*/
 .main-content {
     padding: 40px 24px;
 
-    & h2 {
-        font-weight: 100;
-    }
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "projects announcements"
+                         "projects trending";
+    grid-gap: 20px;
 }
 
+.main-content h2 {
+    font-weight: 100;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+/*Project cards grid layout*/
 .project-card {
     padding: 30px;
     background-color: white;
