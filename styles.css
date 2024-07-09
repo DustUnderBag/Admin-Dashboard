@@ -323,3 +323,25 @@ button.notification {
     width: 30px;
     height: 30px;
 }
+
+/*Action button styling*/
+.actions-wrapper ul {
+    display: flex;
+    gap: 20px;
+}
+
+.action-button {
+    width: 100px;
+    border: none;
+    background-color: var(--color-sidebar);
+    color: white;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 16px;
+
+}
+
+.action-button:hover {
+    background-color: rgb(191, 124, 0);
+}
