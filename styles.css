@@ -36,6 +36,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --color-header: #fff;
     --color-sidebar: #236d98;
     --color-main: #cbe4ea;
+    --color-subtext: #5e5e5e;
 
     --border-radius: 10px;
     --padding-cards: 1.6rem;
@@ -134,7 +135,8 @@ nav {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "projects announcements"
                          "projects trending";
-    grid-gap: 20px;
+    column-gap: 25px;
+    row-gap: 50px;
 }
 
 .main-content h2 {
@@ -195,18 +197,90 @@ nav {
     border-radius: var(--border-radius);
     padding: var(--padding-cards);
     box-shadow: var(--shadow-black);
+}
 
-    & h3 {
-        font-size: 1.1rem;
-    }
-
-    & p {
-        font-size: 0.9rem;
-    }
+.announcements-wrapper h3 {
+    font-size: 1.1rem;
+}
+.announcements-wrapper p {
+    font-size: 0.9rem;
 }
 
 .announcements-wrapper > div + div {
     border-top: 1px solid grey;
     margin-top: 20px;
     padding-top: 20px;
+}
+
+/*Trending items' styling*/
+.trending-wrapper {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: var(--padding-cards);
+    box-shadow: var(--shadow-black);
+}
+
+.user-icon{
+    display: block;
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+#user-1 {
+    background-image: url("./img/author-1.png");
+    background-color: #236d98;
+}
+
+#user-2 {
+    background-image: url("./img/author-2.png");
+    background-color: #239896;
+    background-size: 95%;
+    background-position-y: bottom;
+}
+
+#user-3 {
+    background-image: url("./img/author-3.png");
+    background-size: 65%;
+    background-color: #239848;
+}
+
+#user-4 {
+    background-image: url("./img/author-4.png");
+    background-color: #eca41e;
+}
+
+p.trending-title {
+    color: var(--color-subtext);
+    font-size: 1rem;
+}
+
+/*Trending layout*/
+li.trending-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-areas: "icon name"
+                         "icon title";
+    column-gap: 16px;
+    & > .user-icon {
+        grid-area: icon;
+    }
+
+    & > .user-name {
+        grid-area: name;
+        align-self: end;
+        font-size: 1.1rem ;
+    }
+
+    & > .trending-title {
+        grid-area: title;
+        font-size: 1rem;
+    }
+}
+
+li.trending-item + li.trending-item {
+    margin-top: 1.6em;
 }
