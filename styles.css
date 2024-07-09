@@ -35,7 +35,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --color-bg: #fff;
     --color-header: #fff;
     --color-sidebar: #236d98;
-    --color-main: #cbe4ea;
+    --color-main: #e2eaeb;
     --color-subtext: #5e5e5e;
 
     --border-radius: 10px;
@@ -49,15 +49,14 @@ body {
     grid-template-columns: 350px 1fr;
     grid-template-rows: 1fr 5fr;
     
-    background-color: var(--color-bg);
+    background-color: var(--color-main);
 }
 
 header {
     grid-column: 2;
     grid-row: 1;
-
-    border: 1px black solid;
     background-color: var(--color-header);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);;
 }
 
 .sidebar {
@@ -71,8 +70,6 @@ header {
 .main-content {
     grid-column: 2;
     grid-row: 2;
-
-    background-color: var(--color-main);
 }
 
 ul {
@@ -86,8 +83,7 @@ ul a {
 
 /*Sidebar Grid*/
 .sidebar {
-    padding: 40px 24px;
-
+    padding: 30px 24px;
     font-size: 1.6rem;
     font-weight: bold;
 }
@@ -291,3 +287,32 @@ li.trending-item {
 li.trending-item + li.trending-item {
     margin-top: 1.6em;
 }
+
+/*Header*/
+header {
+    padding: 30px 60px;
+}
+
+/*Search Styling*/
+input[type="search"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    position: relative;
+    outline: none;
+    width: 60%;
+    height: 40px;
+    border: none;
+    background-color: var(--color-main);
+    border-radius: 3rem;
+
+    padding: 10px;
+}
+
+label[for="search"] {
+    content: url("./img/search-icon.svg");
+    width: 30px;
+    vertical-align: -10px;
+    margin-right: 1rem;
+}
+
