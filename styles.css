@@ -159,7 +159,7 @@ nav {
 /*Project cards grid layout*/
 .projects-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(290px, 1fr));
     grid-auto-rows: 316px;
     grid-gap: 24px;
 }
@@ -364,8 +364,8 @@ button.notification {
     grid-gap: 16px;
 
     & > p {
-        font-size: 1.4rem;
-        font-weight: 400;
+        font-size: 1.2rem;
+        font-weight: 500;
     }
 }
 
@@ -415,6 +415,7 @@ button.notification {
         font-size: 2rem;
         align-self: start;
         font-weight: 500;
+        line-height: 1;
     }
 }
 
