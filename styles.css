@@ -32,10 +32,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /*Actual styling*/
 :root {
-    --color-bg: #fff;
-    --color-header: #fff;
-    --color-sidebar: #236d98;
-    --color-main: #e2eaeb;
+    --color-light: #e3e9e7;
+    --color-main: #115e59;
     --color-subtext: #5e5e5e;
 
     --border-radius: 10px;
@@ -49,25 +47,25 @@ p, h1, h2, h3, h4, h5, h6 {
 /*Basic page layout*/
 body {
     display: grid;
-    grid-template-columns: 350px 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 230px auto;
     
-    background-color: var(--color-main);
+    background-color: var(--color-light);
     font-family: "Roboto", var(--system-ui);
 }
 
 header {
+    background-color: #fff;
     grid-column: 2;
     grid-row: 1;
-    background-color: var(--color-header);
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar {
     grid-column: 1;
     grid-row: 1 / 3;
 
-    background-color: var(--color-sidebar);
+    background-color: var(--color-main);
     color: #fff;
 }
 
@@ -87,8 +85,8 @@ ul a {
 
 /*Sidebar Grid*/
 .sidebar {
-    padding: 30px 24px;
-    font-size: 1.6rem;
+    padding: 30px 16px;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
@@ -102,7 +100,7 @@ h1.branding{
 }
 
 .sidebar h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin-bottom: 4rem;
 }
 
@@ -115,7 +113,7 @@ h1 .svg-icon {
 }
 
 nav {
-    margin-left: 1rem;
+    margin-left: .6rem;
 
     & ul {
         margin-bottom: 5rem;
@@ -159,8 +157,8 @@ nav {
 /*Project cards grid layout*/
 .projects-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, minmax(290px, 1fr));
-    grid-auto-rows: 316px;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    grid-auto-rows: 320px;
     grid-gap: 24px;
 }
 
@@ -179,7 +177,7 @@ nav {
     }
 
     & p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: var(--color-subtext)
     }
 }
@@ -214,6 +212,7 @@ nav {
 }
 .announcements-wrapper p {
     font-size: 0.9rem;
+    color: var(--color-subtext)
 }
 
 .announcements-wrapper > div + div {
@@ -311,6 +310,7 @@ header {
     grid-template-columns: 4fr min-content max-content;
     grid-template-rows: 1fr 2fr;
     align-items: center;
+    row-gap: 20px;
     column-gap: 40px;
 
     & > .actions-wrapper {
@@ -330,14 +330,14 @@ input[type="search"] {
 
     position: relative;
     outline: none;
-    width: 60%;
+    width: 80%;
     min-width: 300px;
     height: 40px;
     border: none;
-    background-color: var(--color-main);
+    background-color: var(--color-light);
     border-radius: 3rem;
 
-    padding: 10px;
+    padding: 20px;
 }
 
 label[for="search"] {
@@ -380,7 +380,7 @@ button.notification {
 .action-button {
     width: 100px;
     border: none;
-    background-color: var(--color-sidebar);
+    background-color: var(--color-main);
     color: white;
     border-radius: 20px;
     font-size: 1.2rem;
@@ -396,9 +396,8 @@ button.notification {
 .greeting {
     display: grid;
     grid-template-columns: 100px 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, 50px);
     column-gap: 20px;
-    align-items: center;
 
     & .user-icon {
         grid-row: 1 / 3;
@@ -412,7 +411,7 @@ button.notification {
     }
 
     & .active-user {
-        font-size: 2rem;
+        font-size: 1.6rem;
         align-self: start;
         font-weight: 500;
         line-height: 1;
