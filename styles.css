@@ -292,7 +292,7 @@ li.trending-item + li.trending-item {
 header {
     padding: 30px 60px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr;
     grid-template-rows: 1fr 2fr;
 
     & > .actions-wrapper {
@@ -329,6 +329,18 @@ button.notification {
     border: none;
     width: 30px;
     height: 30px;
+}
+
+/*User Info Layout*/
+.header > .user-info {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-gap: 16px;
+    & > p {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
 }
 
 /*Action button styling*/
