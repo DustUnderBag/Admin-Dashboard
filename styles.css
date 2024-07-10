@@ -381,10 +381,20 @@ label[for="search"] {
 
 /*Notification Styling*/
 button.notification {
-    background: url("./img/Bell\ ring.svg");
+    background: transparent;
     border: none;
     width: 30px;
     height: 30px;
+    stroke: var(--color-main);
+    stroke-width: 2px;
+    fill: none;
+    transition: all 0.2s ease;
+}
+
+button.notification:hover,
+button.notification:active {
+    fill: var(--color-main);
+    transform: scale(1.2);
 }
 
 /*User Info Layout*/
