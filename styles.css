@@ -167,9 +167,9 @@ nav {
     padding: var(--padding-cards);
     background-color: white;
     border-radius: var(--border-radius);
-    box-shadow: inset 8px 0 orange,
+    box-shadow: inset 8px 0 var(--color-main),
                 var(--shadow-black);
-
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
 
@@ -181,6 +181,12 @@ nav {
         font-size: 1.1rem;
         color: var(--color-subtext)
     }
+}
+
+.project-card:hover {
+    box-shadow: inset 16px 0 var(--color-select),
+    var(--shadow-black);
+    padding-left: 2rem;
 }
 
 .buttons-wrapper {
@@ -227,7 +233,6 @@ nav {
     &::after {
         transform: scale(1.2);
     }
-
 }
 
 /*Announcements layout*/
