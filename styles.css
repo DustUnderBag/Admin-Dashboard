@@ -214,6 +214,15 @@ nav {
     padding-top: 20px;
 }
 
+.announcements-wrapper a {
+    color: black;
+    text-decoration: none;
+
+    & :hover {
+        text-decoration: underline;
+    }
+}
+
 /*Trending items' styling*/
 .trending-wrapper {
     height: 380px;
