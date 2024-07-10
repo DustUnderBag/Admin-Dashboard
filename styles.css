@@ -35,7 +35,8 @@ p, h1, h2, h3, h4, h5, h6 {
     --color-light: #e3e9e7;
     --color-main: #115e59;
     --color-subtext: #5e5e5e;
-
+    --color-select: #5eead4;
+    
     --border-radius: 10px;
     --padding-cards: 1.6rem;
     --shadow-black: 2px 4px 5px rgba(0, 0, 0, 0.2);
@@ -192,10 +193,41 @@ nav {
 }
 
 .buttons-wrapper button {
-    width: 1.6rem;
-    background: transparent;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
     border: none;
-    outline: none;
+
+    position: relative;
+    z-index: 1;
+
+    transition: transform 0.3s ease-in;
+}
+
+.buttons-wrapper button::after{
+    content: " ";
+    width: 20px;
+    height: 20px;
+    background-image: url("./img/blob.svg");
+    background-size: contain;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.buttons-wrapper button:hover,
+.buttons-wrapper button:active {
+    transform: scale(1.4);
+    &::after {
+        transform: scale(1.2);
+    }
+
 }
 
 /*Announcements layout*/
@@ -349,7 +381,7 @@ label[for="search"] {
 
 /*Notification Styling*/
 button.notification {
-    background: url("./img/Bell\ ring.svg") transparent;
+    background: url("./img/Bell\ ring.svg");
     border: none;
     width: 30px;
     height: 30px;
@@ -389,7 +421,7 @@ button.notification {
 }
 
 .action-button:hover {
-    background-color: rgb(191, 124, 0);
+    background-color: var(--color-select);
 }
 
 /*Greeting Layout*/
