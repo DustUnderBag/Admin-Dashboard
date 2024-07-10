@@ -292,12 +292,19 @@ li.trending-item + li.trending-item {
 header {
     padding: 30px 60px;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 4fr min-content max-content;
     grid-template-rows: 1fr 2fr;
+    align-items: center;
+    column-gap: 40px;
 
     & > .actions-wrapper {
         grid-column: 2 / 4;
     }
+}
+
+button.notification,
+.user-info {
+    justify-self: end;
 }
 
 /*Search Styling*/
@@ -307,7 +314,8 @@ input[type="search"] {
 
     position: relative;
     outline: none;
-    width: 500px;
+    width: 60%;
+    min-width: 300px;
     height: 40px;
     border: none;
     background-color: var(--color-main);
