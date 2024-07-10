@@ -291,6 +291,13 @@ li.trending-item + li.trending-item {
 /*Header*/
 header {
     padding: 30px 60px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+
+    & > .actions-wrapper {
+        grid-column: 2 / 4;
+    }
 }
 
 /*Search Styling*/
@@ -352,6 +359,8 @@ button.notification {
     grid-template-rows: 1fr 1fr;
     column-gap: 20px;
 
+    align-items: center;
+
     font-weight: bold;
 
     & .user-icon {
@@ -367,5 +376,6 @@ button.notification {
 
     & .active-user {
         font-size: 2rem;
+        align-self: start;
     }
 }
