@@ -347,7 +347,9 @@ button.notification {
 
 /*Action button styling*/
 .actions-wrapper ul {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
     gap: 20px;
 }
 
