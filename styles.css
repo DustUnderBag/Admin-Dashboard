@@ -186,7 +186,7 @@ nav {
 .project-card:hover {
     box-shadow: inset 16px 0 var(--color-select),
     var(--shadow-black);
-    padding-left: 2rem;
+    padding-left: calc(var(--padding-cards) + 5px);
 }
 
 .buttons-wrapper {
