@@ -335,8 +335,10 @@ button.notification {
 .header > .user-info {
     display: grid;
     grid-auto-flow: column;
+    justify-content: start;
     align-items: center;
     grid-gap: 16px;
+
     & > p {
         font-size: 1.4rem;
         font-weight: bold;
